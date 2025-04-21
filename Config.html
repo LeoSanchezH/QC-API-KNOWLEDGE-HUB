@@ -10,6 +10,8 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="/css/prism.css" rel="prism.css" />
+        <script src="prism.js"></script>
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -31,8 +33,8 @@
         <header class="py-5 bg-light border-bottom mb-4">
             <div class="container">
                 <div class="text-center my-5">
-                    <h1 class="fw-bolder">Api testing Home!</h1>
-                    <p class="lead mb-0">Una colección de las bases de conocimiento sobre API testing</p>
+                    <h1 class="fw-bolder">Configuración de APIs</h1>
+                    <p class="lead mb-0">Aprende a configurar y gestionar tus APIs de manera eficiente.</p>
                 </div>
             </div>
         </header>
@@ -78,6 +80,116 @@
                                         <hr>
                                     </div>
                         
+                                    <!-- Table Section -->
+                                    <div class="mb-4">
+                                        <h2>Tabla de Ejemplo</h2>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead class="table-dark">
+                                                    <tr>
+                                                        <th>Columna 1</th>
+                                                        <th>Columna 2</th>
+                                                        <th>Columna 3</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Fila 1, Columna 1</td>
+                                                        <td>Fila 1, Columna 2</td>
+                                                        <td>Fila 1, Columna 3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fila 2, Columna 1</td>
+                                                        <td>Fila 2, Columna 2</td>
+                                                        <td>Fila 2, Columna 3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fila 3, Columna 1</td>
+                                                        <td>Fila 3, Columna 2</td>
+                                                        <td>Fila 3, Columna 3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Fila 4, Columna 1</td>
+                                                        <td>Fila 4, Columna 2</td>
+                                                        <td>Fila 4, Columna 3</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <!-- JSON Code Section -->
+                                    <div class="mb-4">
+                                        <h2>Ejemplo de JSON 1</h2>
+                                        <div class="highlight p-3 border rounded">
+                                            <pre><code class="language-json">
+{
+  "data": [
+    {
+      "type": "articles",
+      "id": "1",
+      "attributes": {
+        "title": "JSON:API paints my bikeshed!",
+        "body": "The shortest article. Ever.",
+        "created": "2015-05-22T14:56:29.000Z",
+        "updated": "2015-05-22T14:56:28.000Z"
+      },
+      "relationships": {
+        "author": {
+          "data": { "id": "42", "type": "people" }
+        }
+      }
+    }
+  ]
+}
+                                            </code></pre>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <h2>Ejemplo de JSON 2</h2>
+                                        <div class="highlight p-3 border rounded">
+                                            <pre><code class="language-json">
+{
+  "included": [
+    {
+      "type": "people",
+      "id": "42",
+      "attributes": {
+        "name": "John",
+        "age": 80,
+        "gender": "male"
+      }
+    }
+  ]
+}
+                                            </code></pre>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-4">
+                                        <h2>Ejemplo de JSON 3</h2>
+                                        <div class="highlight p-3 border rounded">
+                                            <pre><code class="language-json">
+{
+  "meta": {
+    "status": "success",
+    "code": 200,
+    "message": "Request processed successfully"
+  },
+  "data": {
+    "id": "123",
+    "type": "example",
+    "attributes": {
+      "name": "Sample JSON",
+      "description": "This is an example of a JSON response."
+    }
+  }
+}
+                                            </code></pre>
+                                        </div>
+                                    </div>
+                        
                                     <!-- Video Embed Section -->
                                     <div class="mb-4">
                                         <h2>Guia en video</h2>
@@ -121,5 +233,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script src="prism.js"></script>
     </body>
 </html>
+``` 
