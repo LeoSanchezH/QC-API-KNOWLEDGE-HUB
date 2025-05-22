@@ -60,34 +60,136 @@
                                     <!-- Text Section 1 -->
                                     <div class="mb-4">
                                         <h2>Intro</h2>
-                                        <span style="font-weight: 400; color: #000000;">El desarrollo de software gira ahora en torno a las APIs, que relacionan y transmiten datos y funcionalidades entre muchos sistemas y aplicaciones. Por suerte, probar estas APIs en general puede incrementar la eficacia de cualquier procedimiento de pruebas de forma significativa, y puede ayudarte a producir software más rápido que nunca.</span>                                        <hr>
-                                        <p><span style="font-weight: 400; color: #000000;">Las pruebas de API han ido obteniendo más reconocimiento durante los últimos cinco años. Es una herramienta necesaria para casi cualquier equipo de pruebas de un producto, y se utiliza tanto para tareas básicas tales como la carga de una imagen como para tareas complejas tales como los procesos de pago.</span></p>
-                                    </div>
-                        
-                                    <!-- Text Section 2 -->
-                                    <div class="mb-4">
-                                        <h2>Texto 2</h2>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-
+                                        <p>En el ecosistema de desarrollo moderno, es crucial entender el contexto y propósito de cada servicio API. Más allá del consumo técnico, estas APIs representan funcionalidades críticas para el negocio, y conocerlas a fondo facilita su mantenimiento, evolución y monitoreo.</p>
+                                        <p>Esta sección sirve como guía general para mapear, clasificar e identificar dependencias funcionales y técnicas entre servicios, ayudando tanto a desarrolladores como testers a comprender cómo interactúan las piezas de un sistema distribuido.</p>
                                         <hr>
                                     </div>
-                        
-                                    <!-- Video Embed Section -->
+                                    
                                     <div class="mb-4">
-                                        <h2>Guia en video</h2>
-                                        <div class="ratio ratio-16x9">
-                                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                                                    title="YouTube video" allowfullscreen></iframe>
+                                        <h2>Tipo de Servicio</h2>
+                                        <p>Clasificar las APIs según su propósito ayuda a definir mejores prácticas de consumo y pruebas. A continuación se detallan algunos tipos comunes:</p>
+                                        <ul>
+                                            <li><strong>Interno:</strong> De uso exclusivo dentro de la organización.</li>
+                                            <li><strong>Público:</strong> Disponible para consumo por terceros o desarrolladores externos.</li>
+                                            <li><strong>De Apoyo:</strong> Soportan procesos auxiliares como logs o validaciones.</li>
+                                            <li><strong>De Reporte:</strong> Devuelven datos consolidados o históricos.</li>
+                                            <li><strong>De Creación de Datos:</strong> Permiten insertar nuevos registros en el sistema.</li>
+                                            <li><strong>De Revisión de Datos:</strong> Permiten consultar registros existentes.</li>
+                                            <li><strong>De Autenticación:</strong> Manejan el login y control de acceso.</li>
+                                            <li><strong>De Guardado de Datos:</strong> Envían información persistente a la base de datos.</li>
+                                        </ul>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Mapa de Servicios</h2>
+                                        <p>El mapa de servicios permite visualizar cómo se interconectan las APIs entre sí y con otras aplicaciones. Esto facilita la comprensión del flujo de datos, puntos críticos y la identificación de posibles cuellos de botella.</p>
+                                        <p>Idealmente, este mapa se presenta como un diagrama o esquema visual, pero también puede describirse como una jerarquía funcional: por ejemplo, un microservicio de usuarios depende de servicios de autenticación, perfiles y notificaciones.</p>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Dependencias</h2>
+                                        <p>Las aplicaciones modernas rara vez funcionan de forma aislada. Una API puede depender de otras para validar datos, obtener configuraciones o procesar respuestas en cadena. Es fundamental documentar estas dependencias explícitamente.</p>
+                                        <p>Esto permite prever cómo una caída en un servicio puede afectar a otros, o cómo una actualización en la API origen puede requerir ajustes en la API dependiente. En entornos de pruebas, también permite simular mejor los escenarios reales.</p>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Funcionalidades Clave</h2>
+                                        <div class="accordion" id="accordionExample">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        Funcionalidad 1: Gestión de Usuarios
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        Permite registrar, editar, eliminar y autenticar usuarios dentro del sistema.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Funcionalidad 2: Consulta de Productos
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        Devuelve el listado de productos disponibles, con filtros por categoría, stock y precio.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        Funcionalidad 3: Envío de Notificaciones
+                                                    </button>
+                                                </h2>
+                                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body">
+                                                        Permite enviar correos electrónicos o mensajes automáticos ante ciertos eventos del sistema.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Mecanismo de Cache</h2>
+                                        <p>El uso de cache permite mejorar el rendimiento de las APIs reduciendo la latencia en consultas repetidas. Dependiendo del caso de uso, se pueden aplicar mecanismos de cache temporales o permanentes.</p>
+                                        <p>Algunos ejemplos populares incluyen:</p>
+                                        <ul>
+                                            <li><strong>Redis:</strong> Almacena pares clave-valor con tiempo de expiración. Ideal para tokens, sesiones y respuestas frecuentes.</li>
+                                            <li><strong>CDN (Content Delivery Network):</strong> Usado para cachear respuestas estáticas o datos de consulta pública en servicios como Cloudflare o Akamai.</li>
+                                            <li><strong>Cache-Control:</strong> Header HTTP que permite controlar desde el cliente o servidor el tiempo de validez de una respuesta.</li>
+                                        </ul>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Observabilidad</h2>
+                                        <p>La observabilidad permite comprender el comportamiento interno de una API con base en sus métricas, logs y trazas. Un buen sistema debe permitir responder preguntas como: ¿funciona correctamente la API?, ¿dónde está fallando?, ¿cuáles son los tiempos de respuesta?</p>
+                                        <p>Se recomienda utilizar herramientas como Grafana, Prometheus, ELK Stack (Elasticsearch, Logstash, Kibana) o New Relic para monitorear eventos clave. La trazabilidad entre microservicios también puede lograrse con OpenTelemetry y Jaeger.</p>
+                                        <p>Esto facilita la detección temprana de errores y el análisis post-mortem ante incidentes en producción.</p>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Referencias</h2>
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered">
+                                                <thead class="table-dark">
+                                                    <tr>
+                                                        <th>Referencia</th>
+                                                        <th>URL</th>
+                                                        <th>Contacto</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Documentación oficial del API</td>
+                                                        <td><a href="https://reqres.in/">https://reqres.in/</a></td>
+                                                        <td>soporte@reqres.in</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Postman Public APIs</td>
+                                                        <td><a href="https://www.postman.com/explore">https://www.postman.com/explore</a></td>
+                                                        <td>explore@postman.com</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Guía RESTful API Design</td>
+                                                        <td><a href="https://restfulapi.net">https://restfulapi.net</a></td>
+                                                        <td>info@restfulapi.net</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
                                         </div>
                                     </div>
-                                </div>
-                        
+                                    
                         <!-- Sidebar widgets -->
                         <div class="col-lg-4">
                             <!-- Search widget-->

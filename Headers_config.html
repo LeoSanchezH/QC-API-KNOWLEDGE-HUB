@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="Leonardo Sanchez" content="" />
+        <title>API testing - Knowledge hub</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">API testing - Knowledge hub</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">API insights</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page header with logo and tagline-->
+        <header class="py-5 bg-light border-bottom mb-4">
+            <div class="container">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder">Api testing Home!</h1>
+                    <p class="lead mb-0">Una colección de las bases de conocimiento sobre API testing</p>
+                </div>
+            </div>
+        </header>
+        <!-- Page content-->
+        <div class="container">
+            <div class="row">
+                <!-- Blog entries-->
+                <div class="container">
+                    <div class="row">
+                        <div class="container">
+                            <div class="row">
+                                <!-- Main content column -->
+                                <div class="col-lg-8" style="font-family: system-ui, sans-serif;">
+                                    
+                                    <!-- Banner / Jumbotron-style image container -->
+                                    <div class="mb-4 p-3 bg-light rounded">
+                                        <img src="assets/postman_header.webp" alt="Banner" class="img-fluid rounded">
+                                    </div>
+                        
+                                    <!-- Back button -->
+                                    <div class="mb-4">
+                                        <a href="index.html" class="btn btn-secondary">&larr; Back to Home</a>
+                                    </div>
+                        
+                                    <section class="space-y-6">
+                                      <h2 class="text-2xl font-bold">⚖️ Configuración de Headers en Postman</h2>
+                                      <p class="text-base">
+                                        Los headers HTTP son esenciales para proporcionar metadatos en las solicitudes, como autenticación, tipo de contenido, y más.
+                                        Postman ofrece herramientas para configurar estos headers de manera eficiente.
+                                      </p>
+                                    
+                                      <div class="space-y-4">
+                                        <h3 class="text-xl font-semibold">📌 Configurar Headers en una Solicitud</h3>
+                                        <ul class="list-disc list-inside">
+                                          <li>Navega a la pestaña <strong>Headers</strong> dentro de tu solicitud en Postman.</li>
+                                          <li>Agrega las claves y valores necesarios.</li>
+                                          <li>Postman sugerirá opciones comunes como <code>Content-Type</code> mientras escribes.</li>
+                                        </ul>
+                                        <img class="rounded-xl shadow-md w-full max-w-3xl" src="https://learning.postman.com/docs/sending-requests/create-requests/headers/headers-tab.png" alt="Configuración de Headers en Postman">
+                                      </div>
+                                    
+                                      <div class="space-y-4">
+                                        <h3 class="text-xl font-semibold">🔁 Uso de Presets de Headers</h3>
+                                        <ul class="list-disc list-inside">
+                                          <li>En la pestaña <strong>Headers</strong>, selecciona el menú desplegable <strong>Presets</strong>.</li>
+                                          <li>Elige <strong>Manage Presets</strong> y luego <strong>Add Header Preset</strong>.</li>
+                                          <li>Asigna un nombre al preset y define los pares clave-valor.</li>
+                                          <li>Guarda y aplica el preset según sea necesario.</li>
+                                        </ul>
+                                        <img class="rounded-xl shadow-md w-full max-w-3xl" src="https://learning.postman.com/docs/sending-requests/create-requests/headers/header-presets.png" alt="Presets de Headers en Postman">
+                                      </div>
+                                    
+                                      <div class="space-y-4">
+                                        <h3 class="text-xl font-semibold">⚙️ Headers Generados Automáticamente</h3>
+                                        <ul class="list-disc list-inside">
+                                          <li>Postman puede agregar headers automáticamente según la configuración de tu solicitud.</li>
+                                          <li>Para ver estos headers, haz clic en <strong>hidden</strong> en la parte superior de la pestaña <strong>Headers</strong>.</li>
+                                          <li>Para desactivar un header generado automáticamente, desmarca su casilla correspondiente.</li>
+                                          <li>Para sobrescribir un header, desactiva el existente y agrega uno nuevo con el mismo nombre y valor deseado.</li>
+                                        </ul>
+                                        <img class="rounded-xl shadow-md w-full max-w-3xl" src="https://learning.postman.com/docs/sending-requests/create-requests/headers/hidden-headers.png" alt="Headers Ocultos en Postman">
+                                      </div>
+                                    
+                                      <div class="space-y-4">
+                                        <h3 class="text-xl font-semibold">🧬 Agregar Headers a Todas las Solicitudes de una Colección</h3>
+                                        <ol class="list-decimal list-inside">
+                                          <li>Haz clic derecho en la colección deseada y selecciona <strong>Edit</strong>.</li>
+                                          <li>Ve a la pestaña <strong>Pre-request Scripts</strong>.</li>
+                                          <li>Agrega el siguiente script:</li>
+                                        </ol>
+                                        <pre class="bg-gray-900 text-white p-4 rounded-xl overflow-auto text-sm">
+                                    <code>pm.request.headers.add({ key: 'Nombre-Header', value: 'Valor-Header' });</code>
+                                        </pre>
+                                        <img class="rounded-xl shadow-md w-full max-w-3xl" src="https://apidog.com/blog/add-header-to-all-requests-postman/pre-request-script.png" alt="Script de Pre-solicitud en Postman">
+                                      </div>
+                                    </section>
+                                    
+                        
+                                    <!-- Video Embed Section -->
+                                    <div class="mb-4">
+                                        <h2>Guia en video</h2>
+                                        <div class="ratio ratio-16x9">
+                                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                                                    title="YouTube video" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                        
+                        <!-- Sidebar widgets -->
+                        <div class="col-lg-4">
+                            <!-- Search widget-->
+                            <div class="card mb-4">
+                                <div class="card-header">Buscar</div>
+                                <div class="card-body">
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Search" />
+                                        <button class="btn btn-primary" type="button">Go!</button>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Side widget-->
+                            <div class="card mb-4">
+                                <div class="card-header">Side Widget</div>
+                                <div class="card-body">
+                                    aqui van los componentes de BS!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!-- Footer-->
+        <footer class="py-3 bg-dark text-white">
+            <div class="text-center">
+                <p class="m-0">&copy; copy aqui</p>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

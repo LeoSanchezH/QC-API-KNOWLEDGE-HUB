@@ -51,7 +51,7 @@
                                     
                                     <!-- Banner / Jumbotron-style image container -->
                                     <div class="mb-4 p-3 bg-light rounded">
-                                        <img src="assets/api_config.png" alt="Banner" class="img-fluid rounded">
+                                        <img src="assets/http_verbs.gif" alt="Banner" class="img-fluid rounded">
                                     </div>
                         
                                     <!-- Back button -->
@@ -60,141 +60,147 @@
                                     </div>
                         
                                     <!-- Text Section 1 -->
-                                    <div class="mb-4">
-                                        <h2>Intro</h2>
-                                        <span style="font-weight: 400; color: #000000;">El desarrollo de software gira ahora en torno a las APIs, que relacionan y transmiten datos y funcionalidades entre muchos sistemas y aplicaciones. Por suerte, probar estas APIs en general puede incrementar la eficacia de cualquier procedimiento de pruebas de forma significativa, y puede ayudarte a producir software más rápido que nunca.</span>                                        <hr>
-                                        <p><span style="font-weight: 400; color: #000000;">Las pruebas de API han ido obteniendo más reconocimiento durante los últimos cinco años. Es una herramienta necesaria para casi cualquier equipo de pruebas de un producto, y se utiliza tanto para tareas básicas tales como la carga de una imagen como para tareas complejas tales como los procesos de pago.</span></p>
-                                    </div>
+                                    <section id="intro">
+                                        <h2>INTRO</h2>
+                                        <p>En esta sección encontrarás una guía estructurada para comprender cómo una API debe configurarse, documentarse y mantenerse de forma coherente. El objetivo es proporcionar una referencia clara tanto para testers como para desarrolladores, facilitando el entendimiento de los componentes clave que conforman una interfaz de programación de aplicaciones (API) dentro de un flujo de calidad.</p>
+                                        <p>El enfoque está puesto en buenas prácticas que te permitirán evaluar y probar servicios de manera más efectiva, desde la identificación básica de un endpoint hasta el análisis detallado de su lógica y validaciones. Esta documentación ha sido pensada para ser práctica, útil y aplicable en entornos reales de trabajo, especialmente durante procesos de aseguramiento de calidad.</p>
+                                        <p>Ya sea que estés integrándote por primera vez al equipo o necesites consultar aspectos técnicos específicos, aquí encontrarás los puntos fundamentales para comprender el comportamiento esperado de una API y cómo asegurar su correcto funcionamiento.</p>
+                                      </section>
                         
                                     <!-- Text Section 2 -->
                                     <div class="mb-4">
-                                        <h2>Texto 2</h2>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-
+                                        <h2>Identificar la API</h2>
+                                        <p>Comprender a fondo la API que se va a consumir o probar es el primer paso para garantizar una buena estrategia de pruebas. Esto implica identificar el dominio funcional, saber qué módulos del sistema la utilizan y cuáles son los datos clave que intercambia.</p>
+                                        <p>Por ejemplo, una API puede estar orientada a gestionar usuarios, procesar pagos, consultar inventarios o administrar autenticaciones. Es clave también identificar si es pública, interna o de terceros, lo cual impacta en el nivel de pruebas, la seguridad esperada y la frecuencia de uso.</p>
+                                        <p>Una vez identificada, es recomendable documentar el nombre técnico de la API, su versión actual, propietario del servicio y enlaces a documentación Swagger o Postman Collection para facilitar su exploración técnica.</p>
                                         <hr>
                                     </div>
-                        
-                                    <!-- Table Section -->
+                                    
                                     <div class="mb-4">
-                                        <h2>Tabla de Ejemplo</h2>
+                                        <h2>Autenticación</h2>
+                                        <p>Las APIs suelen requerir un mecanismo de autenticación para garantizar que solo usuarios o sistemas autorizados puedan consumir sus recursos. Los métodos más comunes incluyen API Keys, OAuth 2.0, JWT o autenticación básica con usuario y contraseña.</p>
+                                        <p>Se debe especificar en esta sección qué tipo de autenticación aplica, cómo obtener las credenciales, si es necesario renovar tokens y qué headers deben incluirse en las solicitudes.</p>
+                                        <p>Además, puede ser útil indicar qué códigos de error se reciben en caso de autenticación fallida (como 401 Unauthorized o 403 Forbidden) y cómo simular la autenticación en herramientas como Postman o Insomnia.</p>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Setup de Endpoints</h2>
                                         <div class="table-responsive">
                                             <table class="table table-bordered">
                                                 <thead class="table-dark">
                                                     <tr>
-                                                        <th>Columna 1</th>
-                                                        <th>Columna 2</th>
-                                                        <th>Columna 3</th>
+                                                        <th>HTTP Verb</th>
+                                                        <th>Ambiente</th>
+                                                        <th>Sample URL</th>
+                                                        <th>Respuesta esperada</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>Fila 1, Columna 1</td>
-                                                        <td>Fila 1, Columna 2</td>
-                                                        <td>Fila 1, Columna 3</td>
+                                                        <td>GET</td>
+                                                        <td>Producción</td>
+                                                        <td>https://api.publicapis.org/entries</td>
+                                                        <td>200 OK – Lista de APIs públicas</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Fila 2, Columna 1</td>
-                                                        <td>Fila 2, Columna 2</td>
-                                                        <td>Fila 2, Columna 3</td>
+                                                        <td>POST</td>
+                                                        <td>Desarrollo</td>
+                                                        <td>https://reqres.in/api/users</td>
+                                                        <td>201 Created – Usuario creado</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Fila 3, Columna 1</td>
-                                                        <td>Fila 3, Columna 2</td>
-                                                        <td>Fila 3, Columna 3</td>
+                                                        <td>PUT</td>
+                                                        <td>Staging</td>
+                                                        <td>https://reqres.in/api/users/2</td>
+                                                        <td>200 OK – Usuario actualizado</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>Fila 4, Columna 1</td>
-                                                        <td>Fila 4, Columna 2</td>
-                                                        <td>Fila 4, Columna 3</td>
+                                                        <td>DELETE</td>
+                                                        <td>Producción</td>
+                                                        <td>https://reqres.in/api/users/2</td>
+                                                        <td>204 No Content – Usuario eliminado</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
-
-                                    <!-- JSON Code Section -->
+                                    
                                     <div class="mb-4">
-                                        <h2>Ejemplo de JSON 1</h2>
+                                        <h2>Condiciones de Negocio</h2>
+                                        <p>Las condiciones de negocio son reglas específicas que definen el comportamiento aceptado por una API. Estas reglas pueden incluir validaciones como "no se permite registrar dos usuarios con el mismo correo" o "solo usuarios con rol administrador pueden eliminar registros".</p>
+                                        <p>Documentar estas condiciones permite probar la API bajo distintos escenarios y validar que responde adecuadamente frente a entradas válidas e inválidas. Esto reduce errores lógicos en producción y mejora la confiabilidad del sistema.</p>
+                                        <p>También es fundamental para definir los flujos esperados dentro del ciclo de pruebas automatizadas, ya que permite validar no solo respuestas exitosas, sino también los errores controlados.</p>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Lógica de la Aplicación</h2>
+                                        <p>Más allá de simplemente recibir y devolver datos, muchas APIs ejecutan lógica interna que transforma o valida la información. Por ejemplo, un servicio puede calcular automáticamente un total, aplicar un descuento o transformar formatos de fecha según reglas internas.</p>
+                                        <p>Conocer esta lógica ayuda a validar que la respuesta entregada por la API cumple con las reglas del negocio, y no contiene fallos lógicos que puedan derivar en mal funcionamiento del sistema.</p>
+                                        <p>En pruebas de caja negra, entender esta lógica también permite inferir posibles fallos cuando los resultados no se alinean con lo esperado, facilitando la comunicación con el equipo de desarrollo.</p>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Manejo de versiones del endpoint</h2>
+                                        <p>El control de versiones permite evolucionar una API sin afectar a los consumidores existentes. Las versiones suelen gestionarse en la URL (por ejemplo <code>/v1/</code>, <code>/v2/</code>) o mediante headers.</p>
+                                        <p>Esta sección debe listar las versiones actuales disponibles, indicar si alguna fue deprecada y cuáles son los cambios clave entre versiones, como campos eliminados o respuestas modificadas.</p>
+                                        <p>Para testers, esto permite diseñar pruebas específicas por versión y validar que los consumidores que aún usan versiones antiguas no vean interrumpido su funcionamiento.</p>
+                                        <hr>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Ejemplos de Body Schema</h2>
+                                        <p>Incluir ejemplos de body schema ayuda a visualizar cómo estructurar correctamente las solicitudes en operaciones como POST o PUT. A continuación, se muestran algunos ejemplos de JSON utilizados en endpoints públicos de pruebas:</p>
+                                    </div>
+                                    
+                                    <div class="mb-4">
+                                        <h2>Ejemplo de JSON: Crear Usuario</h2>
                                         <div class="highlight p-3 border rounded">
                                             <pre><code class="language-json">
-{
-  "data": [
-    {
-      "type": "articles",
-      "id": "1",
-      "attributes": {
-        "title": "JSON:API paints my bikeshed!",
-        "body": "The shortest article. Ever.",
-        "created": "2015-05-22T14:56:29.000Z",
-        "updated": "2015-05-22T14:56:28.000Z"
-      },
-      "relationships": {
-        "author": {
-          "data": { "id": "42", "type": "people" }
-        }
-      }
-    }
-  ]
-}
+                                    {
+                                      "name": "morpheus",
+                                      "job": "leader"
+                                    }
                                             </code></pre>
                                         </div>
                                     </div>
-
+                                    
                                     <div class="mb-4">
-                                        <h2>Ejemplo de JSON 2</h2>
+                                        <h2>Ejemplo de JSON: Registro fallido</h2>
                                         <div class="highlight p-3 border rounded">
                                             <pre><code class="language-json">
-{
-  "included": [
-    {
-      "type": "people",
-      "id": "42",
-      "attributes": {
-        "name": "John",
-        "age": 80,
-        "gender": "male"
-      }
-    }
-  ]
-}
+                                    {
+                                      "error": "Missing password"
+                                    }
                                             </code></pre>
                                         </div>
                                     </div>
-
+                                    
                                     <div class="mb-4">
-                                        <h2>Ejemplo de JSON 3</h2>
+                                        <h2>Ejemplo de JSON: Consulta exitosa</h2>
                                         <div class="highlight p-3 border rounded">
                                             <pre><code class="language-json">
-{
-  "meta": {
-    "status": "success",
-    "code": 200,
-    "message": "Request processed successfully"
-  },
-  "data": {
-    "id": "123",
-    "type": "example",
-    "attributes": {
-      "name": "Sample JSON",
-      "description": "This is an example of a JSON response."
-    }
-  }
-}
+                                    {
+                                      "data": {
+                                        "id": 2,
+                                        "email": "janet.weaver@reqres.in",
+                                        "first_name": "Janet",
+                                        "last_name": "Weaver",
+                                        "avatar": "https://reqres.in/img/faces/2-image.jpg"
+                                      }
+                                    }
                                             </code></pre>
                                         </div>
                                     </div>
+                                    
                         
                                     <!-- Video Embed Section -->
                                     <div class="mb-4">
                                         <h2>Guia en video</h2>
                                         <div class="ratio ratio-16x9">
-                                            <iframe src="https://www.youtube.com/watch?v=qsejysrhJiU&ab_channel=DominiCode" 
+                                            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
                                                     title="YouTube video" allowfullscreen></iframe>
                                         </div>
                                     </div>
