@@ -60,67 +60,359 @@
                                     <!-- Text Section 1 -->
                                     <div class="mb-4">
                                         <h2>Intro</h2>
-                                        <span style="font-weight: 400; color: #000000;">El desarrollo de software gira ahora en torno a las APIs, que relacionan y transmiten datos y funcionalidades entre muchos sistemas y aplicaciones. Por suerte, probar estas APIs en general puede incrementar la eficacia de cualquier procedimiento de pruebas de forma significativa, y puede ayudarte a producir software más rápido que nunca.</span>                                        <hr>
-                                        <p><span style="font-weight: 400; color: #000000;">Las pruebas de API han ido obteniendo más reconocimiento durante los últimos cinco años. Es una herramienta necesaria para casi cualquier equipo de pruebas de un producto, y se utiliza tanto para tareas básicas tales como la carga de una imagen como para tareas complejas tales como los procesos de pago.</span></p>
-                                    </div>
-                        
-                                    <!-- Text Section 2 -->
-                                    <div class="mb-4">
-                                        <h2>Texto 2</h2>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-
+                                        <p style="color: #000000; font-weight: 400;">
+                                          Documentar las APIs no solo mejora la colaboración entre equipos, sino que también ayuda a estandarizar el consumo de servicios, asegurando que cada punto final sea claro, entendible y funcional. En esta sección encontrarás una clasificación de servicios y un desglose detallado de sus endpoints disponibles.
+                                        </p>
                                         <hr>
-                                    </div>
-                        
-                                    <!-- Video Embed Section -->
-                                    <div class="mb-4">
-                                        <div class="accordion" id="accordionPanelsStayOpenExample">
-                                            <div class="accordion-item">
-                                              <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                                   API DOCS
-                                                </button>
-                                              </h2>
-                                              <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
-                                                <div class="accordion-body">
-                                                  <strong>Aqui se encontraran los api docs</strong> en esta sección se pondran en un acordeon todos los links y overviews de los api docs de diferentes servicios o se puede usar para poner los endpoints de un api en especifico <code>API METHOD</code>, se puede poner aquí.
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                              <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                                  servicio #1
-                                                </button>
-                                              </h2>
-                                              <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
-                                                <div class="accordion-body">
-                                                <strong>Aqui se encontraran los api docs</strong> en esta sección se pondran en un acordeon todos los links y overviews de los api docs de diferentes servicios o se puede usar para poner los endpoints de un api en especifico <code>API METHOD</code>, se puede poner aquí.
-                                                </div>
-                                              </div>
-                                            </div>
-                                            <div class="accordion-item">
-                                              <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
-                                                    servicio #2
-                                                </button>
-                                              </h2>
-                                              <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
-                                                <div class="accordion-body">
-                                                <strong>Aqui se encontraran los api docs</strong> en esta sección se pondran en un acordeon todos los links y overviews de los api docs de diferentes servicios o se puede usar para poner los endpoints de un api en especifico <code>API METHOD</code>, se puede poner aquí.
-                                                </div>
+                                      </div>
+                                      
+                                      <div class="mb-4">
+                                        <h2>Tipos de Servicios</h2>
+                                        <p style="color: #000000; font-weight: 400;">
+                                          Los servicios en una arquitectura de APIs pueden clasificarse en públicos, internos, de apoyo, de reporte, de creación, revisión, autenticación y guardado de datos. Esta segmentación ayuda a definir el alcance, la seguridad y los consumidores esperados para cada servicio.
+                                        </p>
+                                      </div>
+                                      
+                                      <!-- Servicios Públicos -->
+                                      <div class="mb-4">
+                                        <h2>Servicios Públicos</h2>
+                                        <div class="accordion" id="publicServicesAccordion">
+                                      
+                                          <!-- Servicio Público 1 -->
+                                          <div class="accordion-item">
+                                            <h2 class="accordion-header" id="publicService1">
+                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePublic1" aria-expanded="false" aria-controls="collapsePublic1">
+                                                Servicio Público 1
+                                              </button>
+                                            </h2>
+                                            <div id="collapsePublic1" class="accordion-collapse collapse" aria-labelledby="publicService1" data-bs-parent="#publicServicesAccordion">
+                                              <div class="accordion-body">
+                                                <!-- Subacordeones -->
+                                                <div class="accordion" id="public1Endpoints">
+                                      
+                                                  <!-- GET -->
+                                                  <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="getPublic1">
+                                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGetPublic1" aria-expanded="false" aria-controls="collapseGetPublic1">
+                                                        GET /servicio1
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapseGetPublic1" class="accordion-collapse collapse" aria-labelledby="getPublic1" data-bs-parent="#public1Endpoints">
+                                                      <div class="accordion-body">
+                                                        <p><strong>Request</strong></p>
+                                                        <p>Parámetros: ?userId=123</p>
+                                                        <p><strong>Respuesta:</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "status": "success",
+                                        "data": {
+                                          "id": 123,
+                                          "nombre": "Usuario Ejemplo"
+                                        }
+                                      }</code></pre>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                      
+                                                  <!-- POST -->
+                                                  <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="postPublic1">
+                                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePostPublic1" aria-expanded="false" aria-controls="collapsePostPublic1">
+                                                        POST /servicio1
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapsePostPublic1" class="accordion-collapse collapse" aria-labelledby="postPublic1" data-bs-parent="#public1Endpoints">
+                                                      <div class="accordion-body">
+                                                        <p><strong>Request Body (JSON)</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "nombre": "Nuevo usuario",
+                                        "email": "ejemplo@correo.com"
+                                      }</code></pre>
+                                                        </div>
+                                                        <p><strong>Respuesta:</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "status": "created",
+                                        "id": 124
+                                      }</code></pre>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                      
+                                                </div> <!-- /subacordeón -->
                                               </div>
                                             </div>
                                           </div>
+
+                                                                                 <!-- Servicio Público 1 -->
+                                          <div class="accordion-item">
+                                            <h2 class="accordion-header" id="publicService1">
+                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePublic1" aria-expanded="false" aria-controls="collapsePublic1">
+                                                Servicio Público 2
+                                              </button>
+                                            </h2>
+                                            <div id="collapsePublic1" class="accordion-collapse collapse" aria-labelledby="publicService1" data-bs-parent="#publicServicesAccordion">
+                                              <div class="accordion-body">
+                                                <!-- Subacordeones -->
+                                                <div class="accordion" id="public1Endpoints">
+                                      
+                                                  <!-- GET -->
+                                                  <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="getPublic1">
+                                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGetPublic1" aria-expanded="false" aria-controls="collapseGetPublic1">
+                                                        GET /servicio1
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapseGetPublic1" class="accordion-collapse collapse" aria-labelledby="getPublic1" data-bs-parent="#public1Endpoints">
+                                                      <div class="accordion-body">
+                                                        <p><strong>Request</strong></p>
+                                                        <p>Parámetros: ?userId=123</p>
+                                                        <p><strong>Respuesta:</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "status": "success",
+                                        "data": {
+                                          "id": 123,
+                                          "nombre": "Usuario Ejemplo"
+                                        }
+                                      }</code></pre>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                      
+                                                  <!-- POST -->
+                                                  <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="postPublic1">
+                                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePostPublic1" aria-expanded="false" aria-controls="collapsePostPublic1">
+                                                        POST /servicio1
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapsePostPublic1" class="accordion-collapse collapse" aria-labelledby="postPublic1" data-bs-parent="#public1Endpoints">
+                                                      <div class="accordion-body">
+                                                        <p><strong>Request Body (JSON)</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "nombre": "Nuevo usuario",
+                                        "email": "ejemplo@correo.com"
+                                      }</code></pre>
+                                                        </div>
+                                                        <p><strong>Respuesta:</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "status": "created",
+                                        "id": 124
+                                      }</code></pre>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                      
+                                                </div> <!-- /subacordeón -->
+                                              </div>
+                                            </div>
+                                          </div>
+                                                <!-- Servicio Público 3 -->
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="publicService1">
+                                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePublic1" aria-expanded="false" aria-controls="collapsePublic1">
+                                                        Servicio Público 3
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapsePublic1" class="accordion-collapse collapse" aria-labelledby="publicService1" data-bs-parent="#publicServicesAccordion">
+                                                      <div class="accordion-body">
+                                                        <!-- Subacordeones -->
+                                                        <div class="accordion" id="public1Endpoints">
+                                              
+                                                          <!-- GET -->
+                                                          <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="getPublic1">
+                                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGetPublic1" aria-expanded="false" aria-controls="collapseGetPublic1">
+                                                                GET /servicio1
+                                                              </button>
+                                                            </h2>
+                                                            <div id="collapseGetPublic1" class="accordion-collapse collapse" aria-labelledby="getPublic1" data-bs-parent="#public1Endpoints">
+                                                              <div class="accordion-body">
+                                                                <p><strong>Request</strong></p>
+                                                                <p>Parámetros: ?userId=123</p>
+                                                                <p><strong>Respuesta:</strong></p>
+                                                                <div class="highlight p-3 border rounded">
+                                              <pre><code class="language-json">{
+                                                "status": "success",
+                                                "data": {
+                                                  "id": 123,
+                                                  "nombre": "Usuario Ejemplo"
+                                                }
+                                              }</code></pre>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                              
+                                                          <!-- POST -->
+                                                          <div class="accordion-item">
+                                                            <h2 class="accordion-header" id="postPublic1">
+                                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePostPublic1" aria-expanded="false" aria-controls="collapsePostPublic1">
+                                                                POST /servicio1
+                                                              </button>
+                                                            </h2>
+                                                            <div id="collapsePostPublic1" class="accordion-collapse collapse" aria-labelledby="postPublic1" data-bs-parent="#public1Endpoints">
+                                                              <div class="accordion-body">
+                                                                <p><strong>Request Body (JSON)</strong></p>
+                                                                <div class="highlight p-3 border rounded">
+                                              <pre><code class="language-json">{
+                                                "nombre": "Nuevo usuario",
+                                                "email": "ejemplo@correo.com"
+                                              }</code></pre>
+                                                                </div>
+                                                                <p><strong>Respuesta:</strong></p>
+                                                                <div class="highlight p-3 border rounded">
+                                              <pre><code class="language-json">{
+                                                "status": "created",
+                                                "id": 124
+                                              }</code></pre>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                              
+                                                        </div> <!-- /subacordeón -->
+                                                      </div>
+                                                    </div>
+                                                  </div>                                 
+                                      
+                                          <!-- Servicios Público 2-5 con estructura similar -->
+                                          <!-- Puedes duplicar el bloque anterior cambiando IDs y contenido según sea necesario -->
+                                      
                                         </div>
-                                    </div>
-                                </div>
+                                      </div>
+                                      
+                                      <!-- Servicios Internos -->
+                                      <div class="mb-4">
+                                        <h2>Servicios Internos</h2>
+                                        <div class="accordion" id="internalServicesAccordion">
+                                      
+                                          <!-- Servicio Interno 1 -->
+                                          <div class="accordion-item">
+                                            <h2 class="accordion-header" id="internalService1">
+                                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInternal1" aria-expanded="false" aria-controls="collapseInternal1">
+                                                Servicio Interno 1
+                                              </button>
+                                            </h2>
+                                            <div id="collapseInternal1" class="accordion-collapse collapse" aria-labelledby="internalService1" data-bs-parent="#internalServicesAccordion">
+                                              <div class="accordion-body">
+                                                <!-- Subacordeones -->
+                                                <div class="accordion" id="internal1Endpoints">
+                                      
+                                                  <!-- GET -->
+                                                  <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="getInternal1">
+                                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGetInternal1" aria-expanded="false" aria-controls="collapseGetInternal1">
+                                                        GET /interno1
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapseGetInternal1" class="accordion-collapse collapse" aria-labelledby="getInternal1" data-bs-parent="#internal1Endpoints">
+                                                      <div class="accordion-body">
+                                                        <p><strong>Request</strong></p>
+                                                        <p>Parámetros: ?configId=789</p>
+                                                        <p><strong>Respuesta:</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "config": {
+                                          "modo": "debug",
+                                          "estado": true
+                                        }
+                                      }</code></pre>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                      
+                                                  <!-- POST -->
+                                                  <div class="accordion-item">
+                                                    <h2 class="accordion-header" id="postInternal1">
+                                                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePostInternal1" aria-expanded="false" aria-controls="collapsePostInternal1">
+                                                        POST /interno1
+                                                      </button>
+                                                    </h2>
+                                                    <div id="collapsePostInternal1" class="accordion-collapse collapse" aria-labelledby="postInternal1" data-bs-parent="#internal1Endpoints">
+                                                      <div class="accordion-body">
+                                                        <p><strong>Request Body (JSON)</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "config": "nuevo valor",
+                                        "activado": true
+                                      }</code></pre>
+                                                        </div>
+                                                        <p><strong>Respuesta:</strong></p>
+                                                        <div class="highlight p-3 border rounded">
+                                      <pre><code class="language-json">{
+                                        "status": "updated",
+                                        "message": "Configuración actualizada"
+                                      }</code></pre>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                      
+                                                </div> <!-- /subacordeón -->
+                                              </div>
+                                            </div>
+                                          </div>
+                                      
+                                          <!-- Servicios Interno 2-5 con estructura similar -->
+                                      
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="mb-4">
+                                        <h2>Tips de Configuración</h2>
+                                        <ul>
+                                          <li>Usa Postman para validar respuestas JSON rápidamente.</li>
+                                          <li>Incluye tokens de autenticación cuando accedas a endpoints seguros.</li>
+                                          <li>Verifica las políticas de CORS si pruebas desde navegadores.</li>
+                                          <li>Utiliza variables de entorno para facilitar pruebas en staging y producción.</li>
+                                        </ul>
+                                      </div>
+                                      
+                                      <div class="mb-4">
+                                        <h2>FAQ sobre Endpoints</h2>
+                                        <div class="table-responsive">
+                                          <table class="table table-bordered">
+                                            <thead class="table-dark">
+                                              <tr>
+                                                <th>Pregunta</th>
+                                                <th>Respuesta</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td>¿Cómo hago un GET básico en Postman?</td>
+                                                <td>Selecciona método GET, ingresa la URL y haz clic en 'Send'.</td>
+                                              </tr>
+                                              <tr>
+                                                <td>¿Cómo paso parámetros?</td>
+                                                <td>Agrega parámetros al final de la URL: <code>?id=1&amp;tipo=activo</code></td>
+                                              </tr>
+                                              <tr>
+                                                <td>¿Cómo envío un body en POST?</td>
+                                                <td>Ve a la pestaña Body, selecciona 'raw', elige 'JSON' e ingresa el contenido.</td>
+                                              </tr>
+                                              <tr>
+                                                <td>¿Cómo pruebo autenticación con token?</td>
+                                                <td>En Headers, añade: <code>Authorization: Bearer tu_token</code></td>
+                                              </tr>
+                                              <tr>
+                                                <td>¿Cómo inspecciono la respuesta?</td>
+                                                <td>La pestaña 'Body' muestra el JSON de respuesta en Postman tras hacer clic en 'Send'.</td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </div>
                         
                         <!-- Sidebar widgets -->
                         <div class="col-lg-4">

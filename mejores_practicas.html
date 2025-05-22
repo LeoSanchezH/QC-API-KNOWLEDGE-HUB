@@ -65,17 +65,155 @@
                                     </div>
                         
                                     <!-- Text Section 2 -->
-                                    <div class="mb-4">
-                                        <h2>Texto 2</h2>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
+<!-- Carrusel de Escenarios de Pruebas para API REST -->
 
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-                                        <p>Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at massa.</p>
-
-                                        <hr>
+<div class="mb-4">
+    <h3>Escenarios de Prueba para API REST</h3>
+    <div id="carouselEscenarios" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+  
+  ```
+    <!-- Pruebas Positivas Básicas -->
+    <div class="carousel-item active">
+      <div class="p-3 border rounded bg-light d-flex flex-column align-items-center">
+        <img src="assets/positive_testing.png" class="d-block mb-3" alt="Pruebas Positivas Básicas">
+        <h5>✅ Pruebas Positivas Básicas</h5>
+        <p>Verifican que la API funciona correctamente con entradas válidas y dentro del comportamiento esperado.</p>
+        <pre><code class="language-bash">curl -X GET https://api.ejemplo.com/usuarios/123</code></pre>
+      </div>
+    </div>
+  
+    <!-- Pruebas Negativas -->
+    <div class="carousel-item">
+      <div class="p-3 border rounded bg-light d-flex flex-column align-items-center">
+        <img src="https://picsum.photos/id/1016/600/300" class="d-block mb-3" alt="Pruebas Negativas">
+        <h5>⚠️ Pruebas Negativas</h5>
+        <p>Evaluación con datos incorrectos o incompletos para validar la capacidad de la API de manejar errores.</p>
+        <pre><code class="language-bash">curl -X GET https://api.ejemplo.com/usuarios/abc</code></pre>
+      </div>
+    </div>
+  
+    <!-- Pruebas Positivas Ampliadas -->
+    <div class="carousel-item">
+      <div class="p-3 border rounded bg-light d-flex flex-column align-items-center">
+        <img src="https://picsum.photos/id/1018/600/300" class="d-block mb-3" alt="Pruebas Positivas Ampliadas">
+        <h5>🔍 Pruebas Positivas Ampliadas</h5>
+        <p>Prueban más allá del flujo típico, con parámetros opcionales o límites ampliados.</p>
+        <pre><code class="language-bash">curl -X GET "https://api.ejemplo.com/usuarios?limite=1000"</code></pre>
+      </div>
+    </div>
+  
+    <!-- Pruebas Destructivas -->
+    <div class="carousel-item">
+      <div class="p-3 border rounded bg-light d-flex flex-column align-items-center">
+        <img src="https://picsum.photos/id/1020/600/300" class="d-block mb-3" alt="Pruebas Destructivas">
+        <h5>💣 Pruebas Destructivas</h5>
+        <p>Simulan fallos intencionales para medir la resiliencia de la API ante condiciones inesperadas.</p>
+        <pre><code class="language-bash">curl -X POST https://api.ejemplo.com/usuarios -d '{invalid_json}'</code></pre>
+      </div>
+    </div>
+  
+    <!-- Seguridad, Autorización y Permisos -->
+    <div class="carousel-item">
+      <div class="p-3 border rounded bg-light d-flex flex-column align-items-center">
+        <img src="https://picsum.photos/id/1024/600/300" class="d-block mb-3" alt="Seguridad, Autorización y Permisos">
+        <h5>🔐 Seguridad, Autorización y Permisos</h5>
+        <p>Verifican que sólo los usuarios autorizados acceden a los recursos, incluyendo manejo de tokens y roles.</p>
+        <pre><code class="language-bash">curl -X GET https://api.ejemplo.com/admin -H "Authorization: Bearer token"</code></pre>
+      </div>
+    </div>
+  
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselEscenarios" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselEscenarios" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+  ```
+  
+    </div>
+  </div>
+  
+  <!-- Buenas Prácticas -->
+  
+  <div class="mb-4">
+    <h3>Separación de Entornos</h3>
+    <p>Mantener entornos separados para desarrollo, pruebas y producción permite validaciones más controladas sin interferir con datos reales.</p>
+    <ul>
+      <li>📦 <strong>Variables en Postman:</strong> Define variables globales y de entorno para cambiar entre endpoints y credenciales según el ambiente.</li>
+      <pre><code>{
+    "base_url": "https://dev.api.ejemplo.com",
+    "auth_token": "{{token_dev}}"
+  }</code></pre>
+      <li>🔐 <strong>Uso de Postman Vault:</strong> Almacena credenciales sensibles y variables privadas de forma segura para evitar exposiciones accidentales.</li>
+      <li>📁 <strong>Archivos de entorno:</strong> Exporta archivos JSON con variables y cárgalos dinámicamente según el entorno.</li>
+    </ul>
+  </div>
+  
+  <div class="mb-4">
+    <h3>Creación de Usuarios para Escenarios Específicos</h3>
+    <ul>
+      <li><strong>👑 Super usuarios:</strong> Tienen acceso total a todos los módulos. Usado para validar límites máximos de privilegios.</li>
+      <pre><code>POST /usuarios
+  {
+    "rol": "super_admin",
+    "email": "super@ejemplo.com",
+    "clave": "123456"
+  }</code></pre>
+  
+  ```
+  <li><strong>🔧 Usuarios especiales:</strong> Acceden a módulos únicos como analítica o reportes. Útiles para probar permisos intermedios.</li>
+  <pre><code>{ "rol": "analista" }</code></pre>
+  
+  <li><strong>🔒 Usuarios limitados:</strong> Solo acceden a sus propios datos. Sirven para probar restricciones de recursos.</li>
+  <pre><code>{ "rol": "cliente" }</code></pre>
+  
+  <li><strong>🧰 Usuarios de mantenimiento:</strong> Activan rutas internas o de administración, como tareas programadas.</li>
+  <pre><code>{ "rol": "soporte_tecnico" }</code></pre>
+  
+  <li><strong>🚫 Usuarios sin acceso:</strong> Usuarios inactivos, baneados o sin permisos. Útiles para probar respuestas 401/403.</li>
+  <pre><code>{ "activo": false }</code></pre>
+  ```
+  
+    </ul>
+  </div>
+  
+  <div class="mb-4">
+    <h3>Verificar los Códigos de Estado HTTP</h3>
+    <p>Es fundamental validar que la API devuelva los códigos correctos según la operación realizada. Puedes usar Postman assertions para esto.</p>
+    <pre><code>// En Postman - Test
+  pm.test("Código 200 correcto", function () {
+    pm.response.to.have.status(200);
+  });
+  
+  pm.test("Debe fallar con 404 si no existe", function () {
+  pm.response.to.have.status(404);
+  });</code></pre>
+  
+  </div>
+  
+  <div class="mb-4">
+    <h3>Tipos de Flujos de Prueba</h3>
+    <p>Comprender los distintos flujos de prueba permite una mejor planificación de los escenarios que se deben cubrir para asegurar la funcionalidad completa de las APIs.</p>
+    <ul>
+      <li><strong>🔬 Pruebas de Aislamiento:</strong> Ejecutan una única petición de API y verifican su comportamiento individual. Son ideales para validar rutas específicas sin dependencias externas.</li>
+      <li><strong>🔗 Pruebas Combinadas:</strong> Combinan llamadas a API y flujos en la interfaz de usuario. Se usan para validar que la experiencia del usuario refleje correctamente lo que responde la API.</li>
+      <li><strong>📋 Procedimientos de Varios Pasos:</strong> Simulan flujos de usuario reales (como registro + login + consulta de perfil). Permiten validar flujos críticos y detectar errores de integración.</li>
+    </ul>
+  </div>
+  
+  <div class="mb-4">
+    <h3>Pruebas de Carga y CI/CD</h3>
+    <p>Las pruebas de carga ayudan a validar que la API mantiene buen desempeño bajo tráfico intenso.</p>
+    <ul>
+      <li>📈 <strong>Métricas de performance:</strong> Tiempo de respuesta promedio, throughput, uso de CPU y memoria.</li>
+      <li>☁️ <strong>Limitaciones en la nube:</strong> Latencias de red, límite de concurrencia en servidores sin autoescalado, costo por volumen de tráfico.</li>
+      <li>🛠️ <strong>Buenas prácticas en GitHub:</strong> Correr pruebas en entornos temporales, no sobre producción, usar triggers condicionales para evitar sobrecarga.</li>
+      <li>📷 <strong>Ejemplo visual:</strong> <em>(aquí se puede insertar un gráfico de rendimiento con herramientas como k6 o Artillery)</em></li>
+    </ul>
+  </div>
+  
                                     </div>
                         
                                     <!-- Video Embed Section -->
